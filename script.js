@@ -1,5 +1,5 @@
 const gameBoard = (() => {
-    const board = [];
+    const board = ['X', 'O', 'X', 'O', 'X', 'O', 'X', 'O', 'X'];
     return {
       board
     };
@@ -9,22 +9,18 @@ const gameLogic = (() => {
     //method to check for winning conditions
     const add = (a, b) => a + b;
     return {
-        add,
-        sub,
-        mul,
-        div,
+        add
     };
 })();
 
 const displayController = (() => {
     //create private variables for each game board cell
+    const cell0 = document.querySelector('#cell-0');
+    
     //method to output game board array to game board GUI
     const add = (a, b) => a + b;
     return {
-      add,
-      sub,
-      mul,
-      div,
+      add
     };
 })();
 
@@ -53,3 +49,5 @@ const calculator = (() => {
       div,
     };
   })();
+
+  console.log(gameBoard.board);
